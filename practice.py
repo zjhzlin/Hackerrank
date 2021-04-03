@@ -1,5 +1,7 @@
 if __name__ == '__main__':
     n = 24
+    # n = int(input())
+
     if n%2 == 1:
         print('Weird')
     else:
