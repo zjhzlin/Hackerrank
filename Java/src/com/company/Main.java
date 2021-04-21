@@ -49,6 +49,14 @@ public class Main {
         return count;
     }
 
+    // calculate the hourglass sum starting at (i,j)
+    private static int calSum(int i, int j, int[][] arr){
+        int sum = arr[i][j] + arr[i][j+1] + arr[i][j+2] +
+                arr[i+1][j+1]+
+                arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+        return sum;
+    }
+
     public static void main(String[] args) {
         // write your code here
         String s = "Hacker";
@@ -116,6 +124,20 @@ public class Main {
             }
         }
         System.out.println(count);
+
+        // hourglass
+        System.out.println("Hour Glass task");
+        int[][] arr = new int[3][3];
+        arr[0][0] = 2;
+        arr[0][1] = 4;
+        arr[0][2] = 4;
+        arr[1][1] = 2;
+        arr[2][0] = 1;
+        arr[2][1] = 2;
+        arr[2][2] = 4;
+        int sum = calSum(0, 0, arr);
+
+        System.out.println(sum);
 
 
     }
