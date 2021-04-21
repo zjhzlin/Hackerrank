@@ -91,5 +91,15 @@ if __name__ == '__main__':
     print(max(min_axis1))
     print(my_array)
 
+    s = "qA2"
+    flag = False
+    for i in s:
+        if i.isalpha():
+            flag = True
+    print(flag)
+    print(s.isalnum())
+    print(s.isalpha())
+
+
 
     #
